@@ -1,0 +1,75 @@
+<svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+    <style type="text/css">
+    svg {animation: spinner 1s linear infinite;}
+    @keyframes spinner {
+        0% {
+            stroke-dashoffset: 0;
+        } 50% {
+            stroke-dashoffset: 100;
+        } 100% {
+            stroke-dashoffset: 0;
+        }
+    }
+    </style>
+    <circle cx="50px" cy="50px" r="50px" fill="none" stroke="#2196f3" stroke-width="5" stroke-dasharray="250">
+        <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="0 50 50"
+            to="360 50 50"
+            dur="1s"
+            repeatCount="indefinite"
+        />
+    </circle>
+    <circle transform="translate(50 50)" cx="0px" cy="0px" r="25px" fill="#2196f3">
+        <animateTransform
+            id="bigger"
+            attributeName="transform"
+            attributeType="XML"
+            type="scale"
+            additive="sum" 
+            from="0.5 0.5"
+            to="2 2"
+            begin="0s; smaller.end"
+            dur="2s"
+            repeatCount="indefinite"
+        />
+        <animateTransform
+            id="bigger"
+            attributeName="transform"
+            attributeType="XML"
+            type="scale"
+            additive="sum"
+            from="2 2"
+            to="0.5 0.5"
+            begin="0s;bigger.end"
+            dur="2s"
+            repeatCount="indefinite"
+        />
+    </circle>
+
+    <polygon points="50,50 50,33" fill="none" stroke="white" stroke-width="3px" stroke-linejoin="round">
+        <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="0 50,50"
+            to="360 50,50"
+            dur="60s"
+            repeatCount="indefinite"
+        />
+    </polygon>
+    <polygon points="50,50 50,30" fill="none" stroke="white" stroke-width="3px" stroke-linejoin="round">
+        <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="0 50,50"
+            to="360 50,50"
+            dur="1s"
+            repeatCount="indefinite"
+        />
+    </polygon>
+</svg>
+
